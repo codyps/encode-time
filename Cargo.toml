@@ -1,0 +1,18 @@
+[package]
+name = "encode-time"
+version = "0.1.0"
+authors = ["Cody P Schafer <dev@codyps.com>"]
+license = "Apache-2.0 OR MIT"
+include = ["Cargo.toml", "src/*.rs"]
+description = "Encode/Decode Serialize/Deserialize wrappers for time-related types"
+keywords = ["time", "encode", "serde", "serialize"]
+
+[dependencies]
+time = "*"
+serde = "*"
+rustc-serialize = "*"
+
+[dev-dependencies]
+serde_json = "*"
+# rustc-serialize provides json directly
+bincode = { version = "*", features = [ "serde" ]}
